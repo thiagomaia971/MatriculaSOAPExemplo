@@ -9,7 +9,7 @@ export class DisciplinaCustomElement {
   constructor(private disciplinaRepository: DisciplinaRepository) {
   }
 
-  attached() {
-    this.disciplinas = this.disciplinaRepository.GetAll();
+  async attached() {
+    this.disciplinas = await this.disciplinaRepository.GetAll();
   }
 }

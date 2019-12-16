@@ -9,8 +9,8 @@ export class AlunoCustomElement {
   constructor(private alunoRepository: AlunoRepository) {
   }
 
-  attached() {
-    this.alunos = this.alunoRepository.GetAll();
+  async attached() {
+    this.alunos = await this.alunoRepository.GetAll();
   }
 
   select(aluno: Aluno) {

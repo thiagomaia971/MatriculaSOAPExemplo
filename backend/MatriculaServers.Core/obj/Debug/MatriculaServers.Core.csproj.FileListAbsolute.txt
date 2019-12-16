@@ -1,0 +1,5 @@
+E:\Workspace\Universidade\MatriculaSOAPExemplo\backend\AlunoServer\MatriculaServers.Core\bin\Debug\MatriculaServers.Core.dll
+E:\Workspace\Universidade\MatriculaSOAPExemplo\backend\AlunoServer\MatriculaServers.Core\bin\Debug\MatriculaServers.Core.pdb
+E:\Workspace\Universidade\MatriculaSOAPExemplo\backend\AlunoServer\MatriculaServers.Core\obj\Debug\MatriculaServers.Core.csprojAssemblyReference.cache
+E:\Workspace\Universidade\MatriculaSOAPExemplo\backend\AlunoServer\MatriculaServers.Core\obj\Debug\MatriculaServers.Core.dll
+E:\Workspace\Universidade\MatriculaSOAPExemplo\backend\AlunoServer\MatriculaServers.Core\obj\Debug\MatriculaServers.Core.pdb

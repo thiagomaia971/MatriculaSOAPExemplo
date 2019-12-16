@@ -1,4 +1,4 @@
-import { createClient, Client } from 'soap'
+import { createClient, Client, createClientAsync } from 'soap'
 import { Repository } from "./repository";
 import { Aluno } from "entities/aluno";
 import { autoinject } from "aurelia-framework";
@@ -11,18 +11,18 @@ export class AlunoRepository extends Repository<Aluno> {
   ];
 
   constructor() {
-    super("8001");
+    super("44338", "AlunoService");
   }
 
-  public GetAll(): Aluno[] {
-    createClient(this.url, function (error, client) {
-      console.log(error, client);
-      var args = {name: 'value'};
-      client.MyFunction(args, function (err, result) {
-        console.log(result);
-      });
-    });
-    return this.alunos;
+  public async GetAll(): Promise<Aluno[]> {
+    return new Promise<Aluno[]>(resolve => {
+      createClientAsync(this.url)
+        .then(client => {
+          client.Alunos({}, (err, result) => {
+            resolve(result.AlunosResult.Aluno.map(x => Aluno.Create(x.Id, x.Nome)));
+          });
+        });
+    })
   }
 
   public GetSingle(id: string): Aluno {

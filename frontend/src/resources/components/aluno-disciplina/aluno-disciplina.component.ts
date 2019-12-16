@@ -3,6 +3,7 @@ import { AlunoRepository } from './../../../repositories/aluno.repository';
 import { bindable, observable, autoinject } from "aurelia-framework";
 import { Aluno } from "entities/aluno";
 import { Disciplina } from 'entities/disciplina';
+import { MatriculaRepository } from 'repositories/matricula.repository';
 
 @autoinject
 export class AlunoDisciplinaCustomElement {
@@ -10,7 +11,7 @@ export class AlunoDisciplinaCustomElement {
   private alunoSelecionado: Aluno;
   private alunoDisciplinas: Disciplina[] = [];
 
-  constructor(private alunoRepository: AlunoRepository) {
+  constructor(private alunoRepository: AlunoRepository, private matriculaRepository: MatriculaRepository) {
   }
 
   attached() {
@@ -19,8 +20,9 @@ export class AlunoDisciplinaCustomElement {
     console.log(this.alunoSelecionado == undefined)
   }
 
-  alunoIdSelecionadoChanged() {
-    this.alunoSelecionado = this.alunoRepository.GetSingle(this.alunoIdSelecionado);
+  async alunoIdSelecionadoChanged() {
+    // this.alunoSelecionado = this.alunoRepository.GetSingle(this.alunoIdSelecionado);
+    this.alunoDisciplinas = await this.matriculaRepository.GetAllDisciplinas(+this.alunoIdSelecionado);
     // TODO carregar as disciplinas do Aluno
   }
 }

@@ -44,7 +44,9 @@
     <Compile Include="Aluno.cs" />
     <Compile Include="Entity.cs" />
     <Compile Include="Disciplina.cs" />
+    <Compile Include="Matricula.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

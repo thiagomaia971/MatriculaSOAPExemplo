@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatriculaServers.Core", "Ma
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatriculaServers.Disciplina", "MatriculaServers.Matricula\MatriculaServers.Disciplina.csproj", "{6771EF86-8D04-4D75-A722-524B0FCFB72F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatriculaServers.Matriculas", "MatriculaServers.Matriculas\MatriculaServers.Matriculas.csproj", "{96FFE295-4733-4634-A5DC-D76982099D46}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{6771EF86-8D04-4D75-A722-524B0FCFB72F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6771EF86-8D04-4D75-A722-524B0FCFB72F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6771EF86-8D04-4D75-A722-524B0FCFB72F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96FFE295-4733-4634-A5DC-D76982099D46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96FFE295-4733-4634-A5DC-D76982099D46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96FFE295-4733-4634-A5DC-D76982099D46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96FFE295-4733-4634-A5DC-D76982099D46}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

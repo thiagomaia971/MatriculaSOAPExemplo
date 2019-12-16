@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Web.Services;
+using MatriculaServers.Core;
 
 namespace MatriculaServers.Aluno
 {
@@ -14,13 +15,7 @@ namespace MatriculaServers.Aluno
     public class AlunoService : System.Web.Services.WebService
     {
         [WebMethod]
-        public List<Core.Aluno> Alunos()
-        {
-            return new List<Core.Aluno>
-            {
-                new Core.Aluno{Nome = "Aluno 1"},
-                new Core.Aluno{Nome = "Aluno 2"},
-            };
-        }
+        public List<Core.Aluno> Alunos() 
+            => Repository.Alunos;
     }
 }

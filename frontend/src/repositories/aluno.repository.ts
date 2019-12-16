@@ -5,11 +5,6 @@ import { autoinject } from "aurelia-framework";
 
 @autoinject
 export class AlunoRepository extends Repository<Aluno> {
-  private alunos: Aluno[] = [
-    Aluno.Create("1", "Aluno1"),
-    Aluno.Create("2", "Aluno2")
-  ];
-
   constructor() {
     super("44338", "AlunoService");
   }
@@ -26,6 +21,7 @@ export class AlunoRepository extends Repository<Aluno> {
   }
 
   public GetSingle(id: string): Aluno {
-    return this.alunos.find(x => x.Id == id);
+    throw new Error("Method not implemented.");
+    // return this.alunos.find(x => x.Id == id);
   }
 }
